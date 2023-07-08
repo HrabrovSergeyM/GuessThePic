@@ -7,18 +7,28 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E92676282A59715900069EBF /* GameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E92676272A59715900069EBF /* GameView.swift */; };
 		E942709D2A5956E4007A39F2 /* GuessThePicApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E942709C2A5956E4007A39F2 /* GuessThePicApp.swift */; };
 		E942709F2A5956E4007A39F2 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E942709E2A5956E4007A39F2 /* ContentView.swift */; };
 		E94270A12A5956E6007A39F2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E94270A02A5956E6007A39F2 /* Assets.xcassets */; };
 		E94270A42A5956E6007A39F2 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E94270A32A5956E6007A39F2 /* Preview Assets.xcassets */; };
+		E94270AB2A5957C1007A39F2 /* MenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E94270AA2A5957C1007A39F2 /* MenuView.swift */; };
+		E94270AD2A5957D5007A39F2 /* MatchManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E94270AC2A5957D5007A39F2 /* MatchManager.swift */; };
+		E94270AF2A5957E7007A39F2 /* Misc.swift in Sources */ = {isa = PBXBuildFile; fileRef = E94270AE2A5957E7007A39F2 /* Misc.swift */; };
+		E94270B12A59643B007A39F2 /* GameOverView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E94270B02A59643B007A39F2 /* GameOverView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		E92676272A59715900069EBF /* GameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameView.swift; sourceTree = "<group>"; };
 		E94270992A5956E4007A39F2 /* GuessThePic.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GuessThePic.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E942709C2A5956E4007A39F2 /* GuessThePicApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuessThePicApp.swift; sourceTree = "<group>"; };
 		E942709E2A5956E4007A39F2 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		E94270A02A5956E6007A39F2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E94270A32A5956E6007A39F2 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		E94270AA2A5957C1007A39F2 /* MenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuView.swift; sourceTree = "<group>"; };
+		E94270AC2A5957D5007A39F2 /* MatchManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchManager.swift; sourceTree = "<group>"; };
+		E94270AE2A5957E7007A39F2 /* Misc.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Misc.swift; sourceTree = "<group>"; };
+		E94270B02A59643B007A39F2 /* GameOverView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameOverView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,6 +65,11 @@
 				E942709E2A5956E4007A39F2 /* ContentView.swift */,
 				E94270A02A5956E6007A39F2 /* Assets.xcassets */,
 				E94270A22A5956E6007A39F2 /* Preview Content */,
+				E94270AA2A5957C1007A39F2 /* MenuView.swift */,
+				E94270B02A59643B007A39F2 /* GameOverView.swift */,
+				E92676272A59715900069EBF /* GameView.swift */,
+				E94270AC2A5957D5007A39F2 /* MatchManager.swift */,
+				E94270AE2A5957E7007A39F2 /* Misc.swift */,
 			);
 			path = GuessThePic;
 			sourceTree = "<group>";
@@ -138,7 +153,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				E942709F2A5956E4007A39F2 /* ContentView.swift in Sources */,
+				E94270AD2A5957D5007A39F2 /* MatchManager.swift in Sources */,
+				E94270AB2A5957C1007A39F2 /* MenuView.swift in Sources */,
+				E94270AF2A5957E7007A39F2 /* Misc.swift in Sources */,
+				E94270B12A59643B007A39F2 /* GameOverView.swift in Sources */,
 				E942709D2A5956E4007A39F2 /* GuessThePicApp.swift in Sources */,
+				E92676282A59715900069EBF /* GameView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
