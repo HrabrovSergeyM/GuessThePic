@@ -15,7 +15,9 @@ struct GameView: View {
     @State var eraserEnabled = false
     
     func makeGuess() {
-        
+        guard drawingGuess != "" else {return}
+        matchManager.sendString("guess:\(drawingGuess)")
+        drawingGuess = ""
     }
     
     var body: some View {
@@ -89,7 +91,8 @@ struct GameView: View {
         ZStack {
             HStack {
                 Button {
-                    //
+                    matchManager.match?.disconnect()
+                    matchManager.resetGame()
                 } label: {
                     Image(systemName: "arrowshape.turn.up.left.circle.fill")
                         .font(.largeTitle)

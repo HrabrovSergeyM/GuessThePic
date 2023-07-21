@@ -21,7 +21,13 @@ class MatchManager: NSObject, ObservableObject {
     @Published var pastGuesses = [PastGuess]()
     
     @Published var score = 0
-    @Published var remainingTime = maxTimeRemaining
+    @Published var remainingTime = maxTimeRemaining {
+        willSet {
+            if isTimeKeeper { sendString("timer:\(newValue)")}
+            if newValue < 0 { gameOver() }
+        }
+    }
+    
     @Published var lastReceivedDrawing = PKDrawing()
     
     var match: GKMatch?
@@ -82,6 +88,37 @@ class MatchManager: NSObject, ObservableObject {
         sendString("began:\(playerUUIDKey)")
     }
     
+    func swapRoles() {
+        score += 1
+        currentlyDrawing = !currentlyDrawing
+        drawPrompt = everydayObjects.randomElement()!
+    }
+    
+    func gameOver() {
+        isGameOver = true
+        match?.disconnect()
+    }
+    
+    func resetGame() {
+        DispatchQueue.main.async { [self] in
+            isGameOver = false
+            inGame = true
+            
+            drawPrompt = ""
+            score = 0
+            remainingTime = maxTimeRemaining
+            lastReceivedDrawing = PKDrawing()
+        }
+        
+        isTimeKeeper = false
+        match?.delegate = nil
+        match = nil
+        otherPlayer = nil
+        pastGuesses.removeAll()
+        playerUUIDKey = UUID().uuidString
+        
+    }
+    
     func receivedString(_ message: String) {
         let messageSplit = message.split(separator: ":")
         
@@ -104,10 +141,30 @@ class MatchManager: NSObject, ObservableObject {
             if isTimeKeeper {
                 countdownTimer = Timer.publish(every: 1, on: .main, in: .common).autoconnect()
             }
+        case "guess":
+            var guessCorrect = false
             
+            if parameter.lowercased() == drawPrompt {
+                sendString("correct:\(parameter)")
+                swapRoles()
+                guessCorrect = true
+            } else {
+                sendString("incorrect:\(parameter)")
+            }
+            appendPastGuess(guess: parameter, correct: guessCorrect)
+        case "correct":
+            appendPastGuess(guess: parameter, correct: true)
+        case "incorrect":
+            appendPastGuess(guess: parameter, correct: false)
+        case "timer":
+            remainingTime = Int(parameter) ?? 0
         default:
             break
         }
+    }
+    
+    func appendPastGuess(guess: String, correct: Bool) {
+        pastGuesses.append(PastGuess(message: "\(guess)\(correct ? " was correct!" : "")", correct: correct))
     }
     
 }
