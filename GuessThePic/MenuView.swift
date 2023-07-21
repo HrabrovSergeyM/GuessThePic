@@ -55,7 +55,7 @@ struct MenuView: View {
         Spacer()
         
         Button {
-            print("Start")
+            matchManager.startMatchmaking()
         } label: {
             Text("PLAY")
                 .foregroundColor(.white)

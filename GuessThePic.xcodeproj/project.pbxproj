@@ -16,11 +16,14 @@
 		E94270AD2A5957D5007A39F2 /* MatchManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E94270AC2A5957D5007A39F2 /* MatchManager.swift */; };
 		E94270AF2A5957E7007A39F2 /* Misc.swift in Sources */ = {isa = PBXBuildFile; fileRef = E94270AE2A5957E7007A39F2 /* Misc.swift */; };
 		E94270B12A59643B007A39F2 /* GameOverView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E94270B02A59643B007A39F2 /* GameOverView.swift */; };
+		E9A8AE472A6AB18B00ED9FD4 /* MatchManager+GKMatchmakerViewControllerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9A8AE462A6AB18B00ED9FD4 /* MatchManager+GKMatchmakerViewControllerDelegate.swift */; };
+		E9A8AE492A6ABCCC00ED9FD4 /* MatchManager+GKMatchDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9A8AE482A6ABCCC00ED9FD4 /* MatchManager+GKMatchDelegate.swift */; };
 		E9FA153C2A5A24D400371DFC /* DrawingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9FA153B2A5A24D400371DFC /* DrawingView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		E92676272A59715900069EBF /* GameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameView.swift; sourceTree = "<group>"; };
+		E9375DC32A5DFD1A000D25C6 /* GuessThePic.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = GuessThePic.entitlements; sourceTree = "<group>"; };
 		E94270992A5956E4007A39F2 /* GuessThePic.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GuessThePic.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E942709C2A5956E4007A39F2 /* GuessThePicApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuessThePicApp.swift; sourceTree = "<group>"; };
 		E942709E2A5956E4007A39F2 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -30,6 +33,8 @@
 		E94270AC2A5957D5007A39F2 /* MatchManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchManager.swift; sourceTree = "<group>"; };
 		E94270AE2A5957E7007A39F2 /* Misc.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Misc.swift; sourceTree = "<group>"; };
 		E94270B02A59643B007A39F2 /* GameOverView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameOverView.swift; sourceTree = "<group>"; };
+		E9A8AE462A6AB18B00ED9FD4 /* MatchManager+GKMatchmakerViewControllerDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MatchManager+GKMatchmakerViewControllerDelegate.swift"; sourceTree = "<group>"; };
+		E9A8AE482A6ABCCC00ED9FD4 /* MatchManager+GKMatchDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MatchManager+GKMatchDelegate.swift"; sourceTree = "<group>"; };
 		E9FA153B2A5A24D400371DFC /* DrawingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrawingView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -63,6 +68,7 @@
 		E942709B2A5956E4007A39F2 /* GuessThePic */ = {
 			isa = PBXGroup;
 			children = (
+				E9375DC32A5DFD1A000D25C6 /* GuessThePic.entitlements */,
 				E942709C2A5956E4007A39F2 /* GuessThePicApp.swift */,
 				E942709E2A5956E4007A39F2 /* ContentView.swift */,
 				E94270A02A5956E6007A39F2 /* Assets.xcassets */,
@@ -72,6 +78,8 @@
 				E92676272A59715900069EBF /* GameView.swift */,
 				E9FA153B2A5A24D400371DFC /* DrawingView.swift */,
 				E94270AC2A5957D5007A39F2 /* MatchManager.swift */,
+				E9A8AE482A6ABCCC00ED9FD4 /* MatchManager+GKMatchDelegate.swift */,
+				E9A8AE462A6AB18B00ED9FD4 /* MatchManager+GKMatchmakerViewControllerDelegate.swift */,
 				E94270AE2A5957E7007A39F2 /* Misc.swift */,
 			);
 			path = GuessThePic;
@@ -157,6 +165,8 @@
 			files = (
 				E942709F2A5956E4007A39F2 /* ContentView.swift in Sources */,
 				E94270AD2A5957D5007A39F2 /* MatchManager.swift in Sources */,
+				E9A8AE492A6ABCCC00ED9FD4 /* MatchManager+GKMatchDelegate.swift in Sources */,
+				E9A8AE472A6AB18B00ED9FD4 /* MatchManager+GKMatchmakerViewControllerDelegate.swift in Sources */,
 				E94270AB2A5957C1007A39F2 /* MenuView.swift in Sources */,
 				E9FA153C2A5A24D400371DFC /* DrawingView.swift in Sources */,
 				E94270AF2A5957E7007A39F2 /* Misc.swift in Sources */,
@@ -288,6 +298,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = GuessThePic/GuessThePic.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"GuessThePic/Preview Content\"";
@@ -306,6 +318,7 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.brave.GuessThePic;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -317,6 +330,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = GuessThePic/GuessThePic.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"GuessThePic/Preview Content\"";
@@ -335,6 +350,7 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.brave.GuessThePic;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
