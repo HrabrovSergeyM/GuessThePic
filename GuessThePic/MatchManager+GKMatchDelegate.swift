@@ -40,7 +40,7 @@ extension MatchManager: GKMatchDelegate {
     }
     
     func match(_ match: GKMatch, player: GKPlayer, didChange state: GKPlayerConnectionState) {
-        <#code#>
+        //
     }
     
 }
