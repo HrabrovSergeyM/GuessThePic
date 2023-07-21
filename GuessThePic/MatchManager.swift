@@ -136,7 +136,7 @@ class MatchManager: NSObject, ObservableObject {
             
             currentlyDrawing = playerUUIDKey < parameter
             inGame = true
-            isTimeKeeper = true
+            isTimeKeeper = currentlyDrawing
             
             if isTimeKeeper {
                 countdownTimer = Timer.publish(every: 1, on: .main, in: .common).autoconnect()
@@ -153,6 +153,7 @@ class MatchManager: NSObject, ObservableObject {
             }
             appendPastGuess(guess: parameter, correct: guessCorrect)
         case "correct":
+            swapRoles()
             appendPastGuess(guess: parameter, correct: true)
         case "incorrect":
             appendPastGuess(guess: parameter, correct: false)
